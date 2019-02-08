@@ -1,0 +1,27 @@
+[submodule "pack/sirjofri/start/closetag.vim"]
+	path = pack/sirjofri/start/closetag.vim
+	url = https://github.com/docunext/closetag.vim.git
+[submodule "pack/sirjofri/start/delimitMate"]
+	path = pack/sirjofri/start/delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "pack/sirjofri/start/vim-css-color"]
+	path = pack/sirjofri/start/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+[submodule "pack/sirjofri/start/vim-fugitive"]
+	path = pack/sirjofri/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "pack/sirjofri/start/vim-glissues"]
+	path = pack/sirjofri/start/vim-glissues
+	url = https://github.com/sirjofri/vim-glissues.git
+[submodule "pack/sirjofri/opt/vim-biblereader"]
+	path = pack/sirjofri/opt/vim-biblereader
+	url = https://github.com/sirjofri/vim-biblereader.git
+[submodule "pack/sirjofri/start/vim-surround"]
+	path = pack/sirjofri/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "pack/sirjofri/start/tabular"]
+	path = pack/sirjofri/start/tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "pack/sirjofri/start/vim-repeat"]
+	path = pack/sirjofri/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
