@@ -1,4 +1,9 @@
 " Source: https://tex.stackexchange.com/questions/130586/vim-nice-folding-function
+"
+" All credits belong to the creator: petobens. Thank You!
+"
+" vim:fdm=marker
+"
 " Initialization {{{
 "
 " support for table, figure and lstlisting added by sirjofri
@@ -9,6 +14,7 @@ endif
 let b:loaded_mylatexfolding=1
 
 " }}}
+
 " Set options {{{
 
 setlocal foldmethod=expr
@@ -52,6 +58,7 @@ if !exists('g:LatexBox_folded_environments')
 endif
 
 " }}}
+
 " LatexBox_FoldLevel helper functions {{{
 
 " This function parses the tex file to find the sections that are to be folded
@@ -108,6 +115,7 @@ function! s:FoldSectionLevels()
 endfunction
 
 " }}}
+
 " LatexBox_FoldLevel {{{
 
 " Parse file to dynamically set the sectioning fold levels
@@ -171,6 +179,7 @@ function! LatexBox_FoldLevel(lnum)
 endfunction
 
 " }}}
+
 " LatexBox_FoldText helper functions {{{
 
 function! s:CaptionFrame(line)
@@ -223,6 +232,7 @@ function! s:CaptionLstlisting(line)
 endfunction
 
 " }}}
+
 " LatexBox_FoldText {{{
 
 function! LatexBox_FoldText()

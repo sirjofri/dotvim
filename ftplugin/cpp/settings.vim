@@ -14,4 +14,4 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal noexpandtab
 
-inoremap { {<CR>}<ESC>ko
+inoremap { {<CR>}<ESC>O

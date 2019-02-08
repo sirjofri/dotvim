@@ -1,6 +1,6 @@
 " general settings for c files
 "
-" Copyright 2018 sirjofri
+" Copyright 2019 sirjofri
 
 if exists("b:did_c_settings")
 	finish
@@ -14,4 +14,4 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal noexpandtab
 
-inoremap { {<CR>}<ESC>ko
+inoremap { {<CR>}<ESC>O

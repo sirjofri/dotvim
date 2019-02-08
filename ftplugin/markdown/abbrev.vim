@@ -1,2 +1,3 @@
 abbr zb. z. B.
-abbr /-- &ndash;
+abbr /-- –
+abbr /--- —

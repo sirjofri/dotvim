@@ -1,22 +1,20 @@
-if exists("b:did_tex_autocomplete")
+" Merged from many sources to be my own, personal script
+" sirjofri 2019
+
+" {{{ Do only once!
+if exists("b:did_tex_autocompile")
 	finish
 endif
-let b:did_tex_autocomplete = 1
+let b:did_tex_autocompile = 1
+" }}}
 
-" some general tex settings
-setlocal textwidth=78
-setlocal colorcolumn=+0
-setlocal tabstop=3
-setlocal shiftwidth=3
-setlocal spell
-setlocal spelllang=de,en
-"""""""""""""""""""""""""""
-
+" {{{ Set Make Program
 if filereadable("Makefile")
 	set makeprg=make\ 2>/dev/null\ &>/dev/null
 else
 	set makeprg=pdflatex\ -interaction=nonstopmode\ -halt-on-error\ -file-line-error\ -synctex=1\ %\ 2>/dev/null\ &>/dev/null
 endif
+" }}}
 
 let s:job_free = 1
 
@@ -24,6 +22,7 @@ function! ResetLatexCompilationStatus(job, status)
 	let s:job_free = 1
 endfunction
 
+" {{{ Compile function
 function! <SID>Compile()
 	if has("job")
 		if s:job_free
@@ -37,12 +36,15 @@ function! <SID>Compile()
 		redraw!
 	endif
 endfunction
+" }}}
 
+" Compile on Save/Exit
 au! BufWritePost,VimLeave <buffer> silent call <SID>Compile()
 
+" {{{ Setup Compile Draft functionality
 if has("job")
 	let s:draft_job_free = 1
-	let g:live_preview = 1
+	let g:live_preview = 0 " default: off
 
 	function! ResetLatexDraftCompilationStatus(job, status)
 		let s:draft_job_free = 1
@@ -71,3 +73,6 @@ if has("job")
 
 	command! ToggleLLP :call <SID>ToggleLivePreview()
 endif
+" }}}
+
+" vim:fdm=marker:noet
