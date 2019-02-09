@@ -4,3 +4,5 @@ spell/de.utf-8.add.spl
 spell/de.utf-8.spl
 syntax/de.vim
 syntax/en.vim
+syntax/po.vim
+syntax/noweb.vim
