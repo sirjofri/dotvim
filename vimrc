@@ -94,6 +94,7 @@ augroup filetypedetect
 	au! BufNewFile,BufRead *.inc setf php | set tabstop=2
 	au! BufNewFile,BufRead * if &ft == 'php'||&ft == 'html' | set tabstop=2 | set sw=2 | endif
 	au! BufNewFile,BufRead * if &ft == 'css' | set tabstop=3 | set sw=3 | endif
+	au! BufNewFile,BufRead * if &ft == 'noweb' | set colorcolumn=67 | endif
 augroup END
 " }}}
 
